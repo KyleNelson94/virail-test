@@ -1,9 +1,7 @@
-import React, {useState, useEffect, Suspense} from 'react';
+import React, {useState, useEffect, } from 'react'; //Suspense
 import Main from "./components/layout/index";
-import Card from "./components/Card";
 import { API_DATA } from './config/Api';
 import Button from './components/Button';
-import { render } from '@testing-library/react';
 import List from './components/List';
 
 /* App Funktionalitäten
@@ -93,7 +91,7 @@ function App() {
 			<Button onClick={() => _handleTypePress("any")}>Any</Button>
 			
 			<List items={results} loading={isLoading} />
-				{/* <Suspense fallback={<p>Loading...</p>}></Suspense> */}
+			{/* <Suspense fallback={<p>Loading...</p>}></Suspense> */}
 		</Main>
 	);
 }

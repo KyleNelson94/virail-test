@@ -36,7 +36,6 @@ function Card ({ type, price, provider, segments }) {
 export default Card;
 
 Card.propTypes = {
-    // type: PropTypes.string,
-    // price: PropTypes.number,
-    
+    type: PropTypes.string,
+    price: PropTypes.number,
 };
