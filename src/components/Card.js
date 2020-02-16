@@ -36,7 +36,6 @@ function Card ({ type, provider, segments, price }) {
     console.log("segment ------> ", segments.length);
     price = price ? price : segmentPrice.toFixed(2);
 
-
     return (
         <Wrapper>
             <Container>
@@ -53,7 +52,7 @@ function Card ({ type, provider, segments, price }) {
                 </Item>
                 <Item>
 
-                    <h3>{price}</h3> 
+                    <h3>{price}</h3> /
                 </Item>
             </Container>
         </Wrapper>    

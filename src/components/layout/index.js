@@ -2,11 +2,13 @@ import React from "react";
 import { Containers } from "./styles";
 
 const Main = ({ children }) => {
-
+    const { Main, Contain} = Containers;
     return (
-        <Containers.Main>
-            {children}
-        </Containers.Main>
+        <Main>
+            <Contain>
+                {children}
+            </Contain>
+        </Main>
     );
 };
 

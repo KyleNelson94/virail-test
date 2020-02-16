@@ -25,9 +25,9 @@ import Hero from './components/Hero';
 
 	- React Suspense Probieren
 */
-
+const {Dimensions, Color} = Global;
 ReactDOM.render(
-    <ThemeProvider theme={ Global.Color }>
+    <ThemeProvider theme={{ ...Color, ...Dimensions }}>
         <Hero background="/berlin-bg-1.png" />
         <App />
         <Global.Style />

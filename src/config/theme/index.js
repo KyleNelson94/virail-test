@@ -4,13 +4,17 @@ import { createGlobalStyle } from "styled-components";
 const Style = createGlobalStyle`
 
     html {
+
         -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
     }
+
     *, *:before, *:after {
+
         -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit;
     }
 
     body {
+
         margin: 0;
         padding: 0;
         font-size: 16px;
@@ -23,6 +27,20 @@ const Style = createGlobalStyle`
         
         font-family: 'Cabin', sans-serif;
     }
+
+    .carousel {
+        .carousel__slider {
+            .carousel__slider-tray-wrapper {
+                .carousel__slider-tray { /* ul */
+                    .carousel__slide { /* Slide */
+                        margin: 10px;
+                        background: ${props => props.theme.white};
+                        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+                    }
+                }
+            }
+        }
+    }
 `;
 
 const Color = {
@@ -31,7 +49,13 @@ const Color = {
     turquoise: "rgba(12,151,161, .9)",
 };
 
+const Dimensions = {
+    maxWidth: 980,
+    spacing: 30,
+}
+
 export const Global = {
     Style,
-    Color
+    Color,
+    Dimensions
 };

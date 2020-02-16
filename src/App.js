@@ -1,24 +1,21 @@
-import React, {useState, useEffect, } from 'react'; //Suspense
-import styled from "styled-components";
+import React, {useState, useEffect } from 'react'; //Suspense if ii get time
 import Main from "./components/layout/index";
 import { API_DATA } from './config/Api'; // issue - api has cors, need to get browser extensions to get past this.
-import Button from './components/Button';
-import Card from './components/Card';
+// import Button from './components/Button';
 import axios from "axios";
-
-const List = styled.div`
-
-	position: relative;
-	width: 100%;
-`;
+import ErrorHandler from './components/ErrorHandler';
+import Loader from './components/Loader';
+import Location from './components/Location';
+import Transport from './components/Transport';
 function App() {
-	const[API, setAPI] = useState(API_DATA);
+	const[API] = useState(API_DATA);
 	const[isLoading, setIsLoading] = useState(true);
 	const[isError, setIsError] = useState(false);
-	const[data, setData] = useState({ trips: [] });
+	const[data, setData] = useState([]);
+	const[from, setFrom] = useState("");
+	const[to, setTo] = useState("");
 
 	useEffect(() => {
-		
 		const fetchData = async () => {
 			setIsError(false);
 			setIsLoading(true);
@@ -26,19 +23,27 @@ function App() {
 			try {
 				const response = await axios(API);
 				setData(response.data);
+				setTo("Milan"); // get this from api
+				setFrom("Rome"); // set this from api
+				setIsLoading(false);
 			} catch(error) {
-				setIsError(true);
-			}	
+				setIsLoading(false);
+				setIsError(true) 
+			};
 		}
 		
 		fetchData();
 	}, [API]);
 
 	return (
-		<Main>
-			<h2 style={{textAlign: "center"}}>Method of Transport</h2>
-
-		</Main>
+		<React.Fragment>
+			{isError && <ErrorHandler />}
+			{isLoading && <Loader /> }
+			<Main>
+				<Location to={to} from={from} />
+				{!isLoading && <Transport types={data.transportStatus} />}
+			</Main>
+		</React.Fragment>
 	);
 }
 
