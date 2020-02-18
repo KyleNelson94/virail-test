@@ -6,7 +6,6 @@ const Location = ({to, from}) => {
     
     const Segment = styles.div`
 
-        border: 3px solid ${props => props.theme.white};
         padding: ${props => props.theme.spacing / 2}px;
         font-size: 20px;
 

@@ -58,7 +58,7 @@ const LocationContainer = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: ${ props => props.theme.spacing }px;
+    padding: ${ props => props.theme.spacing }px 0;
 
     @media(max-width: 768px) {
         flex-direction: column;

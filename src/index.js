@@ -8,9 +8,10 @@ import * as serviceWorker from './serviceWorker';
 import Hero from './components/Hero';
 
 /* App Funktionalitäten
+
 	1. Fetch Api und filter ergebnisse
 	2. Display ordnung mit billigsten reise zuerst
-	3. Lass den user die reise individualisieren
+	3. Zeig die User die günstigen reisen über die nächsten sieben tage
 
 	*BONUS* 
 	Wenn ich genug zeit habe dann würde ich es versuchen ein *Lucky* Functionalität zu bauen, 
@@ -19,13 +20,11 @@ import Hero from './components/Hero';
 	* Wünsche - Wenn ich mehr zeit hätte ich... *
 	-  React Router genützt für routing.
 	-  Mehr Optionen für Lucky Modus.
-	-  Besser UI :P
-	
-	* Möglichkeiten *
-
-	- React Suspense Probieren
+	-  Besser UI 
+	-  React Suspense Probieren
 */
 const {Dimensions, Color} = Global;
+
 ReactDOM.render(
     <ThemeProvider theme={{ ...Color, ...Dimensions }}>
         <Hero background="/berlin-bg-1.png" />

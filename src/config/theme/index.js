@@ -27,13 +27,17 @@ const Style = createGlobalStyle`
         
         font-family: 'Cabin', sans-serif;
     }
-
+    /* Override carousel plugin styling with custom stuff */
     .carousel {
         .carousel__slider {
             .carousel__slider-tray-wrapper {
                 .carousel__slider-tray { /* ul */
+                    margin-left: -10px;
                     .carousel__slide { /* Slide */
                         margin: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        padding: 10px;
                         background: ${props => props.theme.white};
                         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
                     }
@@ -47,6 +51,8 @@ const Color = {
     white: "rgb(255, 255, 255)",
     black: "rgb(0, 0 , 0)",
     turquoise: "rgba(12,151,161, .9)",
+    grey: "rgb(59, 64, 68)",
+    hotPink: "rgb(254, 67, 101)"
 };
 
 const Dimensions = {

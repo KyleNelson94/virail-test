@@ -5,21 +5,22 @@ const Button = styled.button`
     display: inline-block;
     position: relative;
     appearance: none;
-    background-color: ${props => props.theme.turquoise};
+    background-color: ${props => props.theme.hotPink};
     padding: 0.5rem 1rem;
     text-align: center;
     font-weight: 700;
     font-size: 18px;
-    width: 17%;
+    width: 100%;
     color: ${props => props.theme.white};
-    border: 2px solid ${props => props.theme.turquoise};
-    border-radius: 25px;
-    margin: 10px;
+    border: 3.5px solid ${props => props.theme.hotPink};
+    border-radius: 0;
     transition: 300ms ease-in-out;
+    cursor: pointer;
     
     &:hover {
+
         background-color: ${props => props.theme.white};
-        color: ${props => props.theme.turquoise};
+        color: ${props => props.theme.hotPink};
     }
 `;
 
