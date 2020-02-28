@@ -13,7 +13,7 @@ const Button = styled.button`
     /* width: 100%; just for demo */
     width: 14.28%; 
     color: ${props => props.theme.white};
-    border: 3.5px solid ${props => props.theme.hotPink};
+    border: 3.5px solid ${props => props.theme.white};
     border-radius: 0;
     transition: 300ms ease-in-out;
     cursor: pointer;

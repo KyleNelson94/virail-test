@@ -55,6 +55,7 @@ const ResultList = (results, active, type) => {
                     provider,
                     duration
                 } = result;
+                console.log("Item -------------> ", segments);
 
                 if(i < 5) return (
                     <Row data-active={active} data-type={type} key={i}>
