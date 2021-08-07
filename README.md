@@ -1,4 +1,4 @@
-## My attempt on Interview Challenge for Virail. 
+## Virail app
 
 ###### Basic Directory Structure #######
 
